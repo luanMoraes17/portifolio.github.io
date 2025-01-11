@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="primeiro.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <meta name="description" content="Portfólio de Luan Moraes, estudante de programação em busca de oportunidades de emprego ou estágio.">
     <meta name="keywords" content="Luan Moraes, portfólio, programação, HTML, CSS, JavaScript">
     <meta name="author" content="Luan Moraes">
@@ -14,37 +15,32 @@
 
 <body>
     <header>
-        <nav>
-            <ul style="list-style-type: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-                <li><a href="#Sobre" style="text-decoration: none; color: inherit;">Sobre Mim</a></li>
-                <li><a href="#Conhecimentos" style="text-decoration: none; color: inherit;">Conhecimentos</a></li>
-                <li><a href="#Projetos" style="text-decoration: none; color: inherit;">Projetos</a></li>
-                <li><a href="#Certificados" style="text-decoration: none; color: inherit;">Certificados</a></li>
-                <li><a href="#Contato" style="text-decoration: none; color: inherit;">Contato</a></li>
+        <nav class="navbar">
+            <div class="logo">
+                <span>LM</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#Sobre" class="nav-item">Sobre Mim</a></li>
+                <li><a href="#Conhecimentos" class="nav-item">Conhecimentos</a></li>
+                <li><a href="#Projetos" class="nav-item">Projetos</a></li>
+                <li><a href="#Certificados" class="nav-item">Certificados</a></li>
+                <li><a href="#Contato" class="nav-item">Contato</a></li>
             </ul>
+            <div class="menu-btn">
+                <span class="material-icons">menu</span>
+            </div>
         </nav>
     </header>
 
     <main>
-        <style>
-            body {
-            background: linear-gradient(to bottom, white, rgb(87, 87, 219));
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            }
-        </style>
         <section id="Sobre">
             <img src="ln.JPG" alt="Foto de Luan Moraes" class="foto">
-            <h1>Portifólio</h1>
+            <h1>Portfólio</h1>
             <h2>Sobre mim</h2>
-            <p>Olá, meu nome é <b><i>Luan Moraes</i></b>. Sou estudante de programação e estou em busca de uma oportunidade de emprego ou estágio para ampliar meus conhecimentos e agregar valor ao crescimento da empresa.
-
-                Sou um profissional detalhista, capaz de abordar projetos complexos com uma visão estratégica e analítica. Minha habilidade em compreender as necessidades das pessoas e liderar projetos com base nessa percepção tem sido essencial para alcançar resultados positivos.
-                
-                De projetos individuais a colaborações criativas, estou sempre em busca de explorar novos caminhos e adquirir habilidades que possam ser aplicadas ao meu trabalho. Convido você a conhecer meus projetos apresentados neste portfólio.
-                
-                Ficarei feliz em discutir como podemos trabalhar juntos para criar soluções inovadoras. </p>
+            <p>Olá, meu nome é <strong>Luan Moraes</strong>. Sou estudante de programação e estou em busca de uma oportunidade de emprego ou estágio para ampliar meus conhecimentos e agregar valor ao crescimento da empresa.</p>
+            <p>Sou um profissional detalhista, capaz de abordar projetos complexos com uma visão estratégica e analítica. Minha habilidade em compreender as necessidades das pessoas e liderar projetos com base nessa percepção tem sido essencial para alcançar resultados positivos.</p>
+            <p>De projetos individuais a colaborações criativas, estou sempre em busca de explorar novos caminhos e adquirir habilidades que possam ser aplicadas ao meu trabalho. Convido você a conhecer meus projetos apresentados neste portfólio.</p>
+            <p>Ficarei feliz em discutir como podemos trabalhar juntos para criar soluções inovadoras.</p>
         </section>
 
         <section id="RedesSociais">
@@ -150,7 +146,10 @@
             <a href="certificados/udemy.png" download>
                 <img src="certificados/udemy.png" alt="Certificado Udemy" class="certificado" style="border: 2px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 150px; height: 150px;">
             </a>
-
+            
+            <a href="certificados/alura.jpg" download>
+                <img src="certificados/alura.jpg" alt="Certificado de HTML e CSS" class="certificado" style="border: 2px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 150px; height: 150px;">
+            </a>
             
             </div>
         </section>
@@ -170,9 +169,25 @@
     </main>
 
     <footer>
-        Desenvolvido por Luan Moraes<br>
-        &copy; 2025
+        <p>Desenvolvido por Luan Moraes</p>
+        <p>&copy; 2024</p>
     </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
