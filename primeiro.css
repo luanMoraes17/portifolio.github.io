@@ -1,303 +1,393 @@
 /* Reset e estilos globais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    color: #333;
-  }
-  
-  /* Header e Navegação */
-  header {
-    background-color: rgba(255, 255, 255, 0.95);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #007bff;
-    padding: 0.5rem 1rem;
-    border: 2px solid #007bff;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .logo:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+}
+
+/* Header e Navegação */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #007bff;
+  padding: 0.5rem 1rem;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.nav-item:hover {
+  color: #007bff;
+}
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
   .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-  
-  .nav-item {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-  
-  .nav-item::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: #007bff;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-  }
-  
-  .nav-item:hover::after {
-    width: 100%;
-  }
-  
-  .nav-item:hover {
-    color: #007bff;
-  }
-  
-  .menu-btn {
     display: none;
-    cursor: pointer;
-  }
-  
-  /* Media Queries para Responsividade */
-  @media (max-width: 768px) {
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background-color: white;
-      padding: 1rem;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .menu-btn {
-      display: block;
-    }
-  }
-  
-  /* Animação para o menu mobile */
-  @keyframes slideDown {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .nav-links.active {
-    animation: slideDown 0.3s ease forwards;
-  }
-  
-  /* Seções principais */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  section {
-    margin: 4rem 0;
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1,
-  h2 {
-    color: #007bff;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  /* Seção Sobre */
-  #Sobre {
-    text-align: center;
-  }
-  
-  .foto {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 2rem;
-    object-fit: cover;
-    border: 4px solid #007bff;
-  }
-  
-  /* Redes Sociais */
-  #RedesSociais ul {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .social-button {
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .social-button:hover {
-    transform: translateY(-3px);
-  }
-  
-  /* Conhecimentos */
-  .conhecimentos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  .conhecimento-item {
-    background-color: #007bff;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    transition: transform 0.3s ease;
-  }
-  
-  .conhecimento-item:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Projetos */
-  .flex-container1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-  }
-  
-  .flex-container1 > div {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     background-color: white;
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
-  
-  .flex-container1 > div:hover {
-    transform: translateY(-5px);
+
+  .nav-links.active {
+    display: flex;
   }
-  
-  .flex-container1 img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+
+  .menu-btn {
+    display: block;
   }
-  
-  .flex-container1 button {
-    width: 100%;
-    margin-top: 1rem;
+}
+
+/* Animação para o menu mobile */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
-  
-  /* Certificados */
-  .certificado {
-    transition: transform 0.3s ease;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .certificado:hover {
-    transform: scale(1.05);
+}
+
+.nav-links.active {
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* Seções principais */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+section {
+  margin: 4rem 0;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  color: #007bff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Seção Sobre */
+#Sobre {
+  text-align: center;
+}
+
+.foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  border: 4px solid #007bff;
+}
+
+/* Redes Sociais */
+#RedesSociais ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-button i {
+  font-size: 1.2em;
+}
+
+/* Cores específicas para cada rede social */
+.social-button.linkedin {
+  background-color: #0077b5;
+}
+
+.social-button.github {
+  background-color: #333;
+}
+
+/* Efeitos hover */
+.social-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de clique */
+.social-button:active {
+  transform: translateY(-1px);
+}
+
+/* Animação do ícone */
+.social-button:hover i {
+  animation: bounce 0.5s ease infinite;
+}
+
+/* Conhecimentos */
+.conhecimentos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.conhecimento-item {
+  background-color: #007bff;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.conhecimento-item:hover {
+  transform: scale(1.05);
+}
+
+/* Projetos */
+.flex-container1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.flex-container1 > div {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.flex-container1 > div:hover {
+  transform: translateY(-5px);
+}
+
+.flex-container1 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.flex-container1 button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Certificados */
+.certificado {
+  transition: transform 0.3s ease;
+}
+
+.certificado:hover {
+  transform: scale(1.05);
+}
+
+/* Contato */
+#Contato button {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+#Contato button:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #333;
+  color: white;
+  margin-top: 4rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
   }
-  
-  /* Contato */
-  #Contato button {
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.3s ease;
+
+  nav ul {
+    gap: 1rem;
   }
-  
-  #Contato button:hover {
+
+  .flex-container1 {
+    grid-template-columns: 1fr;
+  }
+
+  .conhecimento-item {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0.5rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .foto {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Estilo para os botões de contato */
+.contact-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-button i {
+  font-size: 1.2em;
+}
+
+/* Cores e efeitos específicos para cada botão */
+.contact-button.email {
+  background-color: #b50000;
+}
+
+.contact-button.whatsapp {
+  background-color: #06c81a;
+}
+
+.contact-button.linkedin {
+  background-color: #0077b5;
+}
+
+.contact-button.github {
+  background-color: #333;
+}
+
+/* Efeito hover */
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito de clique */
+.contact-button:active {
+  transform: translateY(-1px);
+}
+
+/* Animação do ícone no hover */
+.contact-button:hover i {
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
     transform: translateY(-3px);
   }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #333;
-    color: white;
-    margin-top: 4rem;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    main {
-      padding: 1rem;
-    }
-  
-    nav ul {
-      gap: 1rem;
-    }
-  
-    .flex-container1 {
-      grid-template-columns: 1fr;
-    }
-  
-    .conhecimento-item {
-      padding: 0.6rem 1.2rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    nav {
-      padding: 0.5rem;
-    }
-  
-    section {
-      padding: 1rem;
-    }
-  
-    .foto {
-      width: 150px;
-      height: 150px;
-    }
-  }
-  
+}

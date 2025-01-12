@@ -11,6 +11,7 @@
     <meta name="keywords" content="Luan Moraes, portfólio, programação, HTML, CSS, JavaScript">
     <meta name="author" content="Luan Moraes">
     <title>Luan Moraes - Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -45,12 +46,18 @@
 
         <section id="RedesSociais">
             <h2>Redes Sociais</h2>
-                <ul style="list-style-type: none; padding: 0; margin-left: 30px; display: flex; gap: 30px;">
-                    
-                    <li><button onclick="window.location.href='https://www.linkedin.com/in/luan-moraes-583321160/'" style="background-color: #0077b5; color: white; border: none; padding: 10px 20px; cursor: pointer;">LinkedIn</button></li>
-                    <li><button onclick="window.location.href='https://github.com/luanMoraes17'" style="background-color: #333; color: white; border: none; padding: 10px 20px; cursor: pointer;">GitHub</button></li>
-                    
-                </ul>
+            <ul style="list-style-type: none; padding: 0; margin-left: 30px; display: flex; gap: 30px;">
+                <li>
+                    <button onclick="window.location.href='https://www.linkedin.com/in/luan-moraes-583321160/'" class="social-button linkedin">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='https://github.com/luanMoraes17'" class="social-button github">
+                        <i class="fab fa-github"></i> GitHub
+                    </button>
+                </li>
+            </ul>
         </section>
 
         <section id="Conhecimentos">
@@ -182,12 +189,26 @@
         <section id="Contato">
             <h2>Contato</h2>
             <ul style="list-style-type: none; padding: 0; margin-left: 30px; display: flex; flex-wrap: wrap; gap: 20px;">
-            <li><button onclick="window.location.href='mailto:Luanlima1107@gmail.com'" style="background-color: #b50000; color: white; border: none; padding: 10px 20px; cursor: pointer;">Email</button></li>
-            <li><button onclick="window.location.href='https://wa.me/5511948674062'" style="background-color: #06c81a; color: white; border: none; padding: 10px 20px; cursor: pointer;">WhatsApp</button></li>
-            <li><button onclick="window.location.href='https://linkedin.com/in/luan-moraes-583321160'" style="background-color: #0077b5; color: white; border: none; padding: 10px 20px; cursor: pointer;">LinkedIn</button></li>
-            <li><button onclick="window.location.href='https://github.com/luanMoraes17'" style="background-color: #333; color: white; border: none; padding: 10px 20px; cursor: pointer;">GitHub</button></li>
-            
-
+                <li>
+                    <button onclick="window.location.href='mailto:Luanlima1107@gmail.com'" class="contact-button email">
+                        <i class="fas fa-envelope"></i> Email
+                    </button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='https://wa.me/5511948674062'" class="contact-button whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='https://linkedin.com/in/luan-moraes-583321160'" class="contact-button linkedin">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </button>
+                </li>
+                <li>
+                    <button onclick="window.location.href='https://github.com/luanMoraes17'" class="contact-button github">
+                        <i class="fab fa-github"></i> GitHub
+                    </button>
+                </li>
             </ul>
         </section>
         </main>
